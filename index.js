@@ -6,7 +6,7 @@ const PORT = process.env.PORT || 5000
 
 const MONGOURI = require('./config/keys')
 
-mongoose.connect(DB).then(()=>{
+mongoose.connect(MONGOURI).then(()=>{
     console.log("connection successfull")
 }).catch((e)=>{
     console.log(e)
