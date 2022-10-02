@@ -1,0 +1,132 @@
+.App {
+  min-height: 800px;
+  width: 100%;
+  background-color: rgb(223, 237, 250);
+}
+/* addkeeper section */
+.addKeeper {   
+  display: flex;
+  flex-direction: column;
+  /* background: rgb(0, 0, 0); */
+  padding: 1rem;
+  border-radius: 20px;
+  margin: 3rem auto;
+  width:fit-content;
+  box-shadow: rgba(0, 0, 0, 0.5) 10px 10px 20px;
+}
+
+.inputBox {
+  border: none;
+  border-radius: 10px;
+  margin: 0.5rem;
+  padding: 1rem;
+  /* background:rgb(76, 76, 77); */
+  outline: none;
+}
+
+.inputBox::placeholder {
+  color:rgb(167, 166, 166);
+}
+
+.titleInput {
+  font-size: 1.5rem;
+  /* color: rgb(82, 171, 240); */
+  font-family: 'Texturina', serif;
+}
+
+.description {
+  font-size:1.1rem;
+  font-family: 'Kanit', sans-serif;
+  min-height: 100px;
+  min-width: 400px;
+  /* color: rgb(102, 201, 156); */
+  resize: none;
+}
+
+.addButton {
+  color: black;
+  font-weight:bold;
+  background-color: rgb(56, 118, 233);
+  margin: 0.5rem auto;
+  padding: 0.5rem 4.5rem;
+  font-family: 'Texturina', serif;
+  border-radius: 20px;
+  box-shadow: rgba(50, 50, 93, 0.5) 0px 50px 100px -20px, rgba(0, 0, 0, 0.5) 0px 30px 60px -30px, rgba(10, 37, 64, 0.5) 0px -2px 6px 0px inset;
+  cursor: pointer;
+}
+
+/* header section*/
+.header {
+  width: 100%;
+  display: flex;
+  padding: 0.75rem;
+  /* background: black; */
+  background-color: rgb(56, 118, 233);
+  color: azure;
+  justify-content: center;
+  font-family: 'Texturina', serif;
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 10px;
+}
+
+/*keeperlist section*/
+
+.showKeeper {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.keeperCard{
+  display: flex;
+  flex-direction: column;
+  /* background: rgb(147, 137, 137); */
+  padding: 2rem;
+  border-radius: 20px;
+  width: 300px;
+  min-height: 250px;
+  margin: 2rem;
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.5) 10px 10px 20px;
+}
+
+.title {
+  margin-bottom: 1rem;
+  font-family: 'Texturina', serif;
+  /* color: rgb(82, 171, 240); */
+  display: flex;
+  align-items: center;
+}
+
+.descriptionBox{
+  display: flex;
+  width: 100%;
+  resize: none;
+  flex: 1;
+  /* color: rgb(102, 201, 156); */
+  font-family: 'Kanit', sans-serif;
+  outline: none;
+  /* background: black; */
+  /* background: rgb(147, 137, 137); */
+  background-color: rgb(223, 237, 250);
+  border: none;
+}
+
+.deleteIcon {
+  color: rgb(72, 143, 224);
+  position: absolute;
+  right: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 480px) {
+  .addKeeper {
+    width: 200px;
+  }
+
+  .description{
+    
+    min-width: 40%;
+  }
+}
