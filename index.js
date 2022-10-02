@@ -2,9 +2,10 @@ const express = require("express")
 const cors = require("cors")
 const mongoose = require("mongoose")
 
-
 const PORT = process.env.PORT || 5000
-DB = 
+
+const MONGOURI = require('./config/keys')
+
 mongoose.connect(DB).then(()=>{
     console.log("connection successfull")
 }).catch((e)=>{
@@ -70,11 +71,12 @@ app.post("/api/delete",(req,res)=>{
     })
 })
 
-// if (process.env.NODE_ENV === 'production') {
-//     app.use(express.static(path.join(__dirname, 'keeper', 'build')));
-//     app.get('/*', (req, res) => {
-//       res.sendFile(path.join(__dirname, 'keeper', 'build', 'index.html'));
-//     })
+if (process.env.NODE_ENV === 'production') {
+    app.use(express.static(path.join(__dirname, 'keeper', 'build')));
+    app.get('/*', (req, res) => {
+      res.sendFile(path.join(__dirname, 'keeper', 'build', 'index.html'));
+    })
+}
 
 app.listen(PORT,()=>{
     console.log("backend created at port no 5000")
