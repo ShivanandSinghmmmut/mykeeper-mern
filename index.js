@@ -1,12 +1,14 @@
 const express = require("express")
 const cors = require("cors")
 const mongoose = require("mongoose")
+const dotenv = require("dotenv")
 
 const PORT = process.env.PORT || 5000
 
-const MONGOURI = require('./config/keys')
+dotenv.config({path:'./config.env'})
+const DB = process.env.MONGO_URI
 
-mongoose.connect(MONGOURI).then(()=>{
+mongoose.connect(DB).then(()=>{
     console.log("connection successfull")
 }).catch((e)=>{
     console.log(e)
