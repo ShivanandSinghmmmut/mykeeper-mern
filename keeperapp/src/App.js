@@ -10,7 +10,7 @@ import ShowKeeper from './components/showkeeper';
 function App() {
   const [keeperList, setKeeperList] =  useState([])
   useEffect(()=>{
-    axios.get("http://localhost:9000/api/getAll").then((res)=>{setKeeperList(res.data)})
+    axios.get("http://localhost:9000/api/getAll").then((res)=>{setKeeperList(res.data)}).catch((e)=>{console.log(e)})
   })
   return (
     <div className="App">

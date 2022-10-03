@@ -2,6 +2,7 @@ const express = require("express")
 const cors = require("cors")
 const mongoose = require("mongoose")
 const dotenv = require("dotenv")
+const baseurl = `${window.location.origin}/api`;
 
 const PORT = process.env.PORT || 9000
 
@@ -83,3 +84,5 @@ if (process.env.NODE_ENV === 'production') {
 app.listen(PORT,()=>{
     console.log("backend created at port no 9000")
 })
+
+export default (url, options) => fetch(baseurl + url, options);
