@@ -4,7 +4,7 @@ import '../App.css';
 
 const ShowKeeper = ({keeperList,setKeeperList})=>{
     const deleteKeeper=(id)=>{
-        axios.post("http://localhost:5000/api/delete",{id}).then(res=>setKeeperList(res.data))
+        axios.post("/api/delete",{id}).then(res=>setKeeperList(res.data))
     }
     return(
         <>
