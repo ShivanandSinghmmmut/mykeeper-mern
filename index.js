@@ -3,7 +3,7 @@ const cors = require("cors")
 const mongoose = require("mongoose")
 const dotenv = require("dotenv")
 
-const PORT = process.env.PORT || 5000
+const PORT = process.env.PORT || 9000
 
 dotenv.config({path:'./config.env'})
 const DB = process.env.MONGO_URI
@@ -81,5 +81,5 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 app.listen(PORT,()=>{
-    console.log("backend created at port no 5000")
+    console.log("backend created at port no 9000")
 })

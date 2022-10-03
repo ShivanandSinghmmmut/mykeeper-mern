@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import '../App.css';
 import axios from "axios";
 
+
 const AddKeeper = ({setKeeperList})=>{
     const [keeperObj, setKeeperObj] =  useState({
         title:"",
@@ -19,7 +20,7 @@ const AddKeeper = ({setKeeperList})=>{
     }
     const add = ()=>{
         if(keeperObj.title){
-            axios.post("/api/addNew",keeperObj).then((res)=>{console.log(res.data)})
+            axios.post("http://localhost:9000/api/addNew",keeperObj).then((res)=>{console.log(res.data)})
             
             setKeeperObj({
                 title:"",
